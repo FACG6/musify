@@ -2,13 +2,13 @@ const {
     handleHomePage,
     handleSignup,
     handleLogin,
-    handelStatic,
+    handleStatic,
     handleSongs,
     handleAddsong,
     handlePostfav,
     handleMyfav,
-    handelNotFound
-} = require('./handler')
+    handleNotFound
+} = require('./handle')
 
 const router = ((request, response) => {
    const endPoint = request.url;
