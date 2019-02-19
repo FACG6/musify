@@ -1,27 +1,40 @@
-const handleHomePage =() =>{
+const handleHomePage = () => {
 
 }
-const handleSignup =() =>{
+const handleSignup = () => {
 
 }
-const handleLogin =() =>{
+const handleLogin = () => {
 
 }
-const handleStatic = () =>{
+const handleStatic = () => {
 
 }
-const handleSongs = () =>{
-    
-}
-const handleAddsong = () =>{
+const handleSongs = () => {
 
 }
-const handleMyfav = () =>{
+const handleAddsong = () => {
 
 }
-const handleNotFound = () =>{
+const handleMyfav = () => {
 
 }
-const handleNotFound =() =>{
+
+const handlePostfav = ()=>{
+  
+}
+
+const handleNotFound = () => {
 
 }
+module.exports = {
+  handleHomePage,
+  handleSignup,
+  handleLogin,
+  handleStatic,
+  handleSongs,
+  handleAddsong,
+  handlePostfav,
+  handleMyfav,
+  handleNotFound
+};
