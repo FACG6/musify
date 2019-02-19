@@ -8,7 +8,7 @@ const {
     handlePostfav,
     handleMyfav,
     handleNotFound
-} = require('./handle')
+} = require('./handler')
 
 const router = ((request, response) => {
    const endPoint = request.url;
