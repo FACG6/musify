@@ -10,7 +10,14 @@ fs.readFile(filePath,(err,file)=>{
   })
 }
 
-const handleSignup = (endpoint , res) => {
+const handleSignup = () => {
+  
+
+}
+const handleLogin = () => {
+
+}
+const handleStatic = (endpoint , res) => {
   const filePath = path.join(__dirname,"..",endpoint);
   fs.readFile(filePath,(err,file)=>{
     if(err) return console.log('err');
@@ -24,13 +31,6 @@ const handleSignup = (endpoint , res) => {
     res.writeHead(200,{"content-type":extension[ext]});
     res.end(file);
   })
-
-}
-const handleLogin = () => {
-
-}
-const handleStatic = () => {
-
 }
 const handleSongs = () => {
 
