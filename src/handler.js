@@ -1,14 +1,28 @@
 const handleHomePage =() =>{
 
 }
-const handleSignup =() =>{
+
+const handleSignup = () => {
+  
 
 }
-const handleLogin =() =>{
+const handleLogin = () => {
 
 }
-const handleStatic = () =>{
-
+const handleStatic = (endpoint , res) => {
+  const filePath = path.join(__dirname,"..",endpoint);
+  fs.readFile(filePath,(err,file)=>{
+    if(err) return console.log('err');
+    const ext = endpoint.split(".");
+    const extension = {
+      html:"text/html",
+      css:"text/css",
+      js:"application/javascript",
+      ico:"image/x-icon"
+    };
+    res.writeHead(200,{"content-type":extension[ext]});
+    res.end(file);
+  })
 }
 const handleSongs = () =>{
     
