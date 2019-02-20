@@ -15,7 +15,7 @@ CREATE TABLE songs(
 );
 CREATE TABLE favorite(
     fav_id SERIAL PRIMARY KEY,
-    song_id INTEGER FOREIGN KEY REFERENCES songs(song_id),
-    user_id INTEGER FOREIGN KEY REFERENCES users(user_id)
+    song_id INTEGER REFERENCES songs(song_id),
+    user_id INTEGER REFERENCES users(user_id)
 );
 COMMIT;
