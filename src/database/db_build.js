@@ -9,4 +9,8 @@ const onDbBuild = (cb) =>{
         return cb(null,res);
     });
 };
+onDbBuild(() => {
+    console.log('data build')
+})
+
 module.exports = onDbBuild;

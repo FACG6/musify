@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node ./test/testEndpoint.js | tap-spec",
+    "test": "node ./test/testEndpoint.js",
     "start": "node ./src/server.js"
   },
   "repository": {

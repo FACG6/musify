@@ -6,8 +6,8 @@ const {
 
 const addUser = (firstName, lastName, email, password, callback) => {
     const hashedPassword = hashPassword(password)
-    const text = 'INSERT INTO users (firstName,lastName, email, password) Values($1, $2, $3, $4)';
-    const values = [firstName, lastName, email, hashedPassword];
+    const text = 'INSERT INTO users (firstname, lastname, email, password, token) Values ($1, $2, $3, $4, $5)';
+    const values = [firstName, lastName, email, hashedPassword, 'defult'];
     connect.query(text, values, callback);
 }
 
