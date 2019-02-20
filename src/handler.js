@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const handleHomePage =(req, res) =>{
-  const filePath = join(__dirname, '..', 'public', 'index.html');
-  readFile(filePath, (err, file) => {
+  const filePath = path.join(__dirname, '..', 'public', 'index.html');
+  fs.readFile(filePath, (err, file) => {
     if (err) return handleNotFound(res);
     res.writeHead(200, {
       'content-type': 'text/html'
@@ -29,7 +29,7 @@ const handleStatic = (endpoint , res) => {
     json: 'application/json',
     ico: "image/x-icon"
   };
-  
+
   const filePath = path.join(__dirname,"..",...endpoint.split('/'));
   fs.readFile(filePath,(err,file)=>{
     if(err) handleNotFound(res);
