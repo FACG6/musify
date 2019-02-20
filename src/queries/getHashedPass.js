@@ -14,7 +14,8 @@ const gethashedPassword = (email, password, callcompare, callback) => {
     })
 }
 
-module.exports = gethashedPassword;
-// gethashedPassword("israasulaiman@hotmail.com", "123", comparePassword, (err, res)=>{
+// gethashedPassword("israasulaiman@hotmail.com", "123", comparePassword, (err, res) => {
 //     console.log(res);
-// } )
+// })
+
+module.exports = gethashedPassword;
