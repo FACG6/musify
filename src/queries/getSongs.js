@@ -1,4 +1,3 @@
-
 const connect = require('../database/db_connection');
 
 const getSongs = (cb)=>{

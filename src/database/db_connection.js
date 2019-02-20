@@ -1,4 +1,6 @@
-const {Pool} = require('pg');
+const {
+    Pool
+} = require('pg');
 const url = require('url');
 require('dotenv').config();
 let DB_URL = process.env.DATABASE_URL;
@@ -13,5 +15,5 @@ const options ={
     password :password,
     ssl: process.env.hostname !== 'localhost',
 };
-module.exports = new Pool(options);
 
+module.exports = new Pool(options);
