@@ -3,7 +3,7 @@ const {
 } = require('pg');
 const url = require('url');
 require('dotenv').config();
-let DB_URL = process.env.DATABASE_URL;
+let DB_URL = process.env.HEROKU_POSTGRESQL_BRONZE_URL;
 const allInfoConn = url.parse(DB_URL);
 const [username ,password] = allInfoConn.auth.split(':');
 const options ={

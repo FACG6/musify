@@ -9,34 +9,34 @@ test('testing the tape', assert=>{
     assert.end();
 });
 
-test('testing / endpoint', assert=>{
-  assert.end();
-})
+// test('testing / endpoint', assert=>{
+//   assert.end();
+// })
 
-test('testing statics endpoint', assert=>{
-  assert.end();
-})
+// test('testing statics endpoint', assert=>{
+//   assert.end();
+// })
 
-test('testing ', assert => {
-  assert.end();
-})
+// test('testing ', assert => {
+//   assert.end();
+// })
 
-test('testing login', assert => {
-  assert.end();
-})
+// test('testing login', assert => {
+//   assert.end();
+// })
 
-test('testing get songs', assert => {
-  assert.end();
-})
+// test('testing get songs', assert => {
+//   assert.end();
+// })
 
-test('testing add songs', assert => {
-  assert.end();
-})
+// test('testing add songs', assert => {
+//   assert.end();
+// })
 
-test('testing addfavs', assert => {
-  assert.end();
-});
+// test('testing addfavs', assert => {
+//   assert.end();
+// });
 
-test('testing showfavs', assert => {
-  assert.end();
-});
+// test('testing showfavs', assert => {
+//   assert.end();
+// });
