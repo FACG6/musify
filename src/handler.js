@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const handleHomePage =(req, res) =>{
+const handleHomePage =(res) =>{
   const filePath = path.join(__dirname, '..', 'public', 'index.html');
   fs.readFile(filePath, (err, file) => {
     if (err) return handleNotFound(res);
@@ -29,7 +29,6 @@ const handleStatic = (endpoint , res) => {
     json: 'application/json',
     ico: "image/x-icon"
   };
-
   const filePath = path.join(__dirname,"..",...endpoint.split('/'));
   fs.readFile(filePath,(err,file)=>{
     if(err) handleNotFound(res);
@@ -46,10 +45,10 @@ const handleAddsong = () =>{
 const handleMyfav = () =>{
 
 }
-const handleServerError = () =>{
+const handleServerError = (res) =>{
 
 }
-const handleNotFound =() =>{
+const handleNotFound =(res) =>{
 
 }
 
