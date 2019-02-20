@@ -1,16 +1,16 @@
 const {Pool} = require('pg');
 const url = require('url');
 require('dotenv').config();
-let DB_URL = process.env.DB_URL;
+let DB_URL = process.env.DATABASE_URL;
 const allInfoConn = url.parse(DB_URL);
-const [username ,password] = allInfo.auth.split(':');
+const [username ,password] = allInfoConn.auth.split(':');
 const options ={
     host:allInfoConn.hostname,
     port :allInfoConn.port,
-    db: allInfoConn.pathname.split('/')[1],
+    database: allInfoConn.pathname.split('/')[1],
     max: process.env.MAX_DB_CONNECTION || 2,
     user: username,
-    pass :password,
+    password :password,
     ssl: process.env.hostname !== 'localhost',
 };
 module.exports = new Pool(options);

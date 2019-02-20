@@ -5,11 +5,12 @@ CREATE TABLE users(
     firstName VARCHAR(255) NOT NULL,
     lastName VARCHAR(255) NOT NULl,
     email TEXT NOT NULL UNIQUE,
-    password TEXT NOT NULL
+    password TEXT NOT NULL,
+    token text NOT NULL
 );
 CREATE TABLE songs(
     song_id SERIAL PRIMARY KEY ,
-    songName VARCHAR(255) ,
+    songName VARCHAR(255),
     singerName VARCHAR(255)
 
 );

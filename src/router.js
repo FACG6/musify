@@ -7,18 +7,23 @@ const {
     handleStatic,
     handleLogin,
     handleAddsong,
-    handleSongs
+    handleSongs,
+    handlegetSongs
 } = require('./handler')
 
 const router = ((request, response) => {
    const endPoint = request.url;
     if (endPoint === '/') {
-        handleHomePage(response);
-    } else if (endPoint === '/signup' && request.method === 'GET') {
+        handleHomePage(request, response);
+    } else if (endPoint === '/signup' && request.method === 'POST') {
         handleSignup(request, response);
+
     } else if (endPoint === '/login' && request.method === 'POST') {
        handleLogin (request, response)
-    } else if (endPoint.includes('public') && request.method === 'GET') {
+
+    } else if (endPoint === '/getSongs' &&  request.method === 'GET') {
+        handlegetSongs(request, response)
+    } else if (endPoint.includes('/public/') && request.method === 'GET') {
         handleStatic(endPoint, response)
     } else if (endPoint === '/songs' && request.method === 'GET') {
        handleSongs (request, response)
@@ -29,9 +34,9 @@ const router = ((request, response) => {
     }else if (endPoint === '/myfav' && request.method === 'GET') {
         handleMyfav(request, response)
     }
-     else {
-        handleNotFound(response)
-    }
+    //  else {
+    //     handleNotFound(response)
+    // }
 })
 
 module.exports = router;
