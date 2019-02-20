@@ -6,6 +6,6 @@ const checkUserEmail = (email, callback) => {
     connect.query(text, values, callback);
 }
 
+// checkUserEmail('israa@gmail.com', (err, res)=>console.log(err, res));
+
 module.exports = checkUserEmail;
-
-

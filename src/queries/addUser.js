@@ -1,5 +1,8 @@
 const connect = require('../database/db_connection');
-const {hashPassword,comparePassword} = require('../hashPass');
+const {
+    hashPassword,
+    comparePassword
+} = require('../hashPass');
 
 const addUser = (firstName, lastName, email, password, callback) => {
     const hashedPassword = hashPassword(password)
@@ -9,6 +12,3 @@ const addUser = (firstName, lastName, email, password, callback) => {
 }
 
 module.exports = addUser;
-
-
-
