@@ -6,8 +6,8 @@ window.onload = () => {
             const elementContaner = document.createElement('div');
             const songName = document.createElement('h2')
             const singerName = document.createElement('h2')
-            songName.textContent = ` Song:   ${element.singername}`;
-            singerName.textContent = `Singer:   ${element.songname}`;
+            songName.textContent = ` Singer:   ${element.singername}`;
+            singerName.textContent = `Song:   ${element.songname}`;
             elementContaner.appendChild(songName);
             elementContaner.appendChild(singerName);
             songsContaner.appendChild(elementContaner);
