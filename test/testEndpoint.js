@@ -1,7 +1,5 @@
 const test = require('tape');
 const supertest = require('supertest');
-const router = require('../src/router')
-
 
 test('testing the tape', assert=>{
   const num = 1;
